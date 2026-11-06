@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scorecard · Dear Mamdani</title>
+<meta name="description" content="How New York City is doing on housing, jobs, safety, transit, schools and litigation costs, from public data.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body>
+<div class="preview">Preview — this site is not launched yet. Figures and wording may change.</div>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="index.html"><b>Dear Mamdani</b><span>Weekly letters and a monthly scorecard from New Yorkers</span></a>
+  <nav class="nav" aria-label="Main"><a href="agenda.html">Our agenda</a><a href="letters/index.html">Letters</a><a href="scorecard.html" aria-current="page">Scorecard</a><a href="take-action.html">Take action</a><a href="get-in-touch.html">Get in touch</a><a href="about.html">About</a><a class="btn" href="index.html#subscribe">Subscribe</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<p class="eyebrow">Scorecard · <span data-sc="window">—</span> · Updated <span data-sc="updated">—</span></p>
+<h1>How is New York doing?</h1>
+<p class="lede">Of <b data-sc="graded">—</b> measures, <b data-sc="worse">—</b> got worse, <b data-sc="better">—</b> got better and <b data-sc="same">—</b> stayed about the same compared with the same months a year earlier.</p>
+<p class="small" data-sc-error></p>
+
+<section class="section">
+  <div class="tally" id="tally"></div>
+</section>
+
+<section class="section">
+  <h2>Results by category</h2>
+  <div class="bars" id="bars"></div>
+  <div class="legend"><span><i style="background:var(--worse)"></i>Worse</span><span><i style="background:var(--same)"></i>About the same</span><span><i style="background:var(--better)"></i>Better</span><span><i style="background:var(--rule)"></i>Context, not graded</span></div>
+  <nav class="jump" aria-label="Categories">
+    <a href="#population-and-jobs">Population &amp; jobs</a><a href="#housing">Housing</a><a href="#safety-and-quality-of-life">Safety &amp; quality of life</a><a href="#getting-around">Getting around</a><a href="#schools">Schools</a><a href="#litigation-costs">Litigation costs</a>
+  </nav>
+  <p class="small" style="margin-top:1rem">Police and subway figures run through September, so they compare July–September. School and litigation figures are annual results released during the period. Changes under 2% (under half a point for rates) count as about the same.</p>
+</section>
+
+<div id="tables"></div>
+
+<div id="housing-extra" hidden>
+  <div class="grid" style="margin-top:1.25rem">
+    <div class="card">
+      <h3>NYCHA vs. private landlords, per 1,000 apartments</h3>
+      <p class="small">August–October 2026. NYCHA tenants get an independent inspector only through Housing Court, so the NYCHA count is a floor. The middle row is the closest like-for-like comparison.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Measure</th><th>Landlord</th><th class="num">Apartments</th><th class="num">Violations</th><th class="num">Per 1,000</th><th class="num">Class C per 1,000</th></tr></thead>
+        <tbody id="nycha-body"></tbody>
+      </table></div>
+      <p class="small" style="margin-top:0.75rem">NYCHA court-ordered violations in September–October: <b data-sc="sepoct-prev">—</b> in 2025, <b data-sc="sepoct-curr">—</b> in 2026.</p>
+    </div>
+    <div class="card">
+      <h3>Median sale prices, July–September 2026</h3>
+      <p class="small">Single-unit sales of $100,000 or more, bulk sales removed. NYC Department of Finance.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Type</th><th>Borough</th><th class="num">Sales</th><th class="num">Median price</th></tr></thead>
+        <tbody id="sales-body"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+
+<details class="method" id="method">
+  <summary>How this scorecard is built</summary>
+  <dl class="defs">
+    <dt>Grading</dt><dd>Each measure states whether a rise or a fall is good for New Yorkers. Counts and dollars use percent change; rates use the change in percentage points. Changes smaller than the measure's threshold are graded about the same. Measures marked context are shown but not graded.</dd>
+    <dt>Attribution</dt><dd>A change during this term is not proof that the Mayor caused it. Many measures move with the economy, the weather, state law or the MTA. Read each against its longer trend.</dd>
+    <dt>New construction</dt><dd>Permits count only projects filed in the same calendar year, so 2026 permits reflect projects filed under the current administration. 100% affordable projects are identified from HPD's affordable housing production list.</dd>
+    <dt>NYCHA vs. private</dt><dd>NYCHA apartments are NYCHA-managed units from the NYCHA Development Data Book (January 2025), excluding developments converted to private management. Private apartments are units in buildings with three or more apartments in MapPLUTO, minus NYCHA-owned lots. Private court-route violations count every violation at a building with a tenant repair case opened in the prior 12 months, which overstates the private figure.</dd>
+    <dt>Noise near NYCHA</dt><dd>NYCHA addresses stand in for low-income neighborhoods, since NYCHA households are low-income by definition.</dd>
+    <dt>Rents</dt><dd>The 2025 rent figures are worked back from the year-over-year change the market report gives.</dd>
+    <dt>Jobs</dt><dd>Resident labor force comes from the State Labor Department; job counts by employer come from the Bureau of Labor Statistics.</dd>
+  </dl>
+</details>
+
+</div></main>
+<footer class="site-foot"><div class="wrap">
+  <span>© 2026 Dear Mamdani. Data from public sources, cited on every figure.</span>
+  <span><a href="about.html#corrections">Corrections</a> · <a href="https://wethemiddle.substack.com">We, the Middle on Substack</a></span>
+</div></footer>
+<script src="assets/scorecard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+[
+ {
+  "group": "NYCHA-managed",
+  "measure": "Violations from court-ordered inspections",
+  "units": 155956,
+  "total": 1739,
+  "class_c": 300,
+  "prev_total": null,
+  "note": "Every NYCHA violation in the data comes from a Housing Court\u2013ordered inspection.",
+  "sepoct_prev": 1037,
+  "sepoct_curr": 1255
+ },
+ {
+  "group": "Private buildings",
+  "measure": "Violations at buildings with an open tenant repair case",
+  "units": 2691640,
+  "total": 68156,
+  "class_c": 20639,
+  "prev_total": 68550,
+  "note": "Approximation: counts every violation at a building with a tenant repair case opened in the prior 12 months.",
+  "sepoct_prev": null,
+  "sepoct_curr": null
+ },
+ {
+  "group": "Private buildings",
+  "measure": "All violations",
+  "units": 2691640,
+  "total": 211602,
+  "class_c": 64561,
+  "prev_total": 200392,
+  "note": "By inspection date. Private tenants can get an inspector through 311; NYCHA tenants generally cannot.",
+  "sepoct_prev": null,
+  "sepoct_curr": null
+ }
+]

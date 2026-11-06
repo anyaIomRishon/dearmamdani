@@ -1,0 +1,52 @@
+<!--
+title: Dear Mamdani
+description: Weekly letters to Mayor Mamdani and a monthly scorecard of how New York is doing, from New Yorkers.
+scorecard: yes
+-->
+<section class="section hero">
+  <div>
+    <p class="eyebrow">For New Yorkers who want a city that works</p>
+    <h1>Dear Mayor Mamdani, here is how New York is doing.</h1>
+    <p class="lede">Every month we track rents, jobs, safety, the subway, schools and what the city pays in lawsuits, straight from public data. Every week we write to the Mayor about one issue, and ask New Yorkers to sign on.</p>
+    <p><a class="btn" href="#subscribe">Get the weekly letter</a> <a class="btn ghost" href="agenda.html">Read our agenda</a></p>
+  </div>
+  <div class="card feature">
+    {{latest_letter}}
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Scorecard · <span data-sc="window">—</span></p>
+  <h2>Biggest moves this month</h2>
+  <p class="lede">Of <b data-sc="graded">—</b> measures, <b data-sc="worse">—</b> got worse, <b data-sc="better">—</b> got better and <b data-sc="same">—</b> stayed about the same compared with a year earlier.</p>
+  <p class="small" data-sc-error></p>
+  <div class="grid">
+    <div class="card"><h3 class="worse">Got worse</h3><ul class="moves" id="moves-worse"></ul></div>
+    <div class="card"><h3 class="better">Got better</h3><ul class="moves" id="moves-better"></ul></div>
+  </div>
+  <p style="margin-top:1rem"><a href="scorecard.html">See all measures and their sources</a></p>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Take action</p>
+  <h2>Let robotaxis serve New York, safely</h2>
+  <p class="measure">Human drivers kill a New Yorker on foot about every four days. Self-driving taxis already carry riders in other American cities. Add your name to the petition asking the Mayor and the Governor to allow them here, with real safety rules.</p>
+  <p><a class="btn" href="take-action.html#robotaxis">Sign the petition</a></p>
+</section>
+
+<section class="section" id="subscribe">
+  <div class="signup">
+    <h2>Get the weekly letter</h2>
+    <p>One letter a week to the Mayor, the numbers behind it, and one thing you can do. Free.</p>
+    <iframe src="{{substack}}/embed" title="Subscribe to the weekly letter" scrolling="no" loading="lazy"></iframe>
+    <p class="small" style="margin:0.5rem 0 0">Form not showing? <a href="{{substack}}/subscribe" style="color:inherit">Subscribe on Substack</a>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grid">
+    <div class="card"><h3>What worries you about NYC?</h3><p>Tell us. The concerns we hear most become the next letters.</p><a href="get-in-touch.html">Get in touch</a></div>
+    <div class="card"><h3>Our agenda</h3><p>What we're asking City Hall for, and how you can add your name.</p><a href="agenda.html">Read the agenda</a></div>
+    <div class="card"><h3>How we count</h3><p>Every figure comes from public data and links to its source.</p><a href="scorecard.html#method">Read the method</a></div>
+  </div>
+</section>

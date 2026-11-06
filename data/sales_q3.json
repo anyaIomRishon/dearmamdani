@@ -1,0 +1,128 @@
+[
+ {
+  "type": "Co-ops",
+  "borough": "NYC",
+  "sales": 3471,
+  "median_price": 555000.0,
+  "key": "Co-ops \u00b7 NYC"
+ },
+ {
+  "type": "Co-ops",
+  "borough": "Manhattan",
+  "sales": 1842,
+  "median_price": 860000.0,
+  "key": "Co-ops \u00b7 Manhattan"
+ },
+ {
+  "type": "Co-ops",
+  "borough": "Bronx",
+  "sales": 180,
+  "median_price": 266250.0,
+  "key": "Co-ops \u00b7 Bronx"
+ },
+ {
+  "type": "Co-ops",
+  "borough": "Brooklyn",
+  "sales": 561,
+  "median_price": 509250.0,
+  "key": "Co-ops \u00b7 Brooklyn"
+ },
+ {
+  "type": "Co-ops",
+  "borough": "Queens",
+  "sales": 868,
+  "median_price": 340000.0,
+  "key": "Co-ops \u00b7 Queens"
+ },
+ {
+  "type": "Co-ops",
+  "borough": "Staten Island",
+  "sales": 20,
+  "median_price": 254000.0,
+  "key": "Co-ops \u00b7 Staten Island"
+ },
+ {
+  "type": "Condos",
+  "borough": "NYC",
+  "sales": 2817,
+  "median_price": 1262630.0,
+  "key": "Condos \u00b7 NYC"
+ },
+ {
+  "type": "Condos",
+  "borough": "Manhattan",
+  "sales": 1549,
+  "median_price": 1741000.0,
+  "key": "Condos \u00b7 Manhattan"
+ },
+ {
+  "type": "Condos",
+  "borough": "Bronx",
+  "sales": 69,
+  "median_price": 275000.0,
+  "key": "Condos \u00b7 Bronx"
+ },
+ {
+  "type": "Condos",
+  "borough": "Brooklyn",
+  "sales": 740,
+  "median_price": 1240000.0,
+  "key": "Condos \u00b7 Brooklyn"
+ },
+ {
+  "type": "Condos",
+  "borough": "Queens",
+  "sales": 442,
+  "median_price": 685602.5,
+  "key": "Condos \u00b7 Queens"
+ },
+ {
+  "type": "Condos",
+  "borough": "Staten Island",
+  "sales": 17,
+  "median_price": 422500.0,
+  "key": "Condos \u00b7 Staten Island"
+ },
+ {
+  "type": "1-3 family homes",
+  "borough": "NYC",
+  "sales": 4334,
+  "median_price": 965000.0,
+  "key": "1-3 family homes \u00b7 NYC"
+ },
+ {
+  "type": "1-3 family homes",
+  "borough": "Manhattan",
+  "sales": 68,
+  "median_price": 4450000.0,
+  "key": "1-3 family homes \u00b7 Manhattan"
+ },
+ {
+  "type": "1-3 family homes",
+  "borough": "Bronx",
+  "sales": 492,
+  "median_price": 790000.0,
+  "key": "1-3 family homes \u00b7 Bronx"
+ },
+ {
+  "type": "1-3 family homes",
+  "borough": "Brooklyn",
+  "sales": 1293,
+  "median_price": 1338480.0,
+  "key": "1-3 family homes \u00b7 Brooklyn"
+ },
+ {
+  "type": "1-3 family homes",
+  "borough": "Queens",
+  "sales": 1868,
+  "median_price": 950000.0,
+  "key": "1-3 family homes \u00b7 Queens"
+ },
+ {
+  "type": "1-3 family homes",
+  "borough": "Staten Island",
+  "sales": 613,
+  "median_price": 775000.0,
+  "key": "1-3 family homes \u00b7 Staten Island"
+ }
+]
