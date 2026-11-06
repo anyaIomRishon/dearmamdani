@@ -211,3 +211,16 @@ h1 { font-size: clamp(2rem, 4.6vw, 3rem); }
 h2 { font-size: clamp(1.3rem, 2.6vw, 1.65rem); }
 .brand b { font-size: 1.7rem; }
 .tally .big { font-family: var(--font-display); font-weight: 400; }
+
+/* Blue opening panel on inner pages, matching the home page */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.page-head { background: var(--blue); color: var(--on-blue); border-radius: 10px; border-bottom: 8px solid var(--orange); padding: clamp(1.5rem, 4vw, 2.75rem); margin-bottom: 2rem; position: relative; overflow: hidden; }
+.page-head::after { content: ""; position: absolute; right: -3.5rem; bottom: -5rem; width: 11rem; height: 11rem; border-radius: 50%; background: var(--orange); }
+.page-head > * { position: relative; z-index: 1; max-width: calc(100% - 6rem); }
+@media (max-width: 36rem) { .page-head > * { max-width: 100%; } .page-head::after { width: 7rem; height: 7rem; right: -3rem; bottom: -4rem; } }
+.page-head h1 { color: var(--on-blue); margin-bottom: 0.75rem; }
+.page-head .lede { color: color-mix(in srgb, var(--on-blue) 86%, transparent); margin: 0; }
+.page-head .eyebrow { color: var(--orange); }
+.page-head b { color: var(--orange); }
+.page-head .hl { background: none; color: var(--orange); padding: 0; }

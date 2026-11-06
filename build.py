@@ -35,7 +35,15 @@ def meta_block(text):
         text = text[m.end():]
     return meta, text
 
+def page_head(body):
+    """Wrap a page's opening eyebrow, headline and lede in the blue page-head panel."""
+    m = re.match(r'\s*(<p class="eyebrow">.*?</p>\s*<h1>.*?</h1>\s*(?:<p class="lede">.*?</p>)?)', body, re.S)
+    if not m:
+        return body
+    return f'<header class="page-head">{m.group(1)}</header>' + body[m.end():]
+
 def page(title, body, path, description="", extra_head="", scripts=""):
+    body = page_head(body)
     depth = path.count("/")
     rel = "../" * depth
     current = ' aria-current="page"'
