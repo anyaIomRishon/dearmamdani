@@ -52,9 +52,6 @@ def page(title, body, path, description="", extra_head="", scripts=""):
 <title>{html.escape(full_title)}</title>
 <meta name="description" content="{html.escape(description or TAGLINE)}">
 {robots}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 <link rel="stylesheet" href="{rel}assets/site.css">
 {extra_head}
 </head>
@@ -62,7 +59,7 @@ def page(title, body, path, description="", extra_head="", scripts=""):
 {banner}
 <header class="site-head"><div class="wrap">
   <a class="brand" href="{rel}index.html"><b>Dear <em>Mamdani</em></b><span>{TAGLINE}</span><span class="indep">Independent · Not affiliated with the Mayor or his campaign</span></a>
-  <nav class="nav" aria-label="Main">{nav}<a class="btn" href="{rel}index.html#subscribe">Subscribe</a></nav>
+  <nav class="nav" aria-label="Main">{nav}<a class="btn" href="{SUBSTACK}/subscribe">Subscribe</a></nav>
 </div></header>
 <main><div class="wrap">
 {body}
@@ -103,8 +100,8 @@ def build():
         latest_html = (f'<p class="eyebrow">This week\'s letter</p><h2><a href="letters/{latest["slug"]}.html">{html.escape(latest.get("title", ""))}</a></h2>'
                        f'<p>{html.escape(latest.get("summary", ""))}</p><a class="btn" href="letters/{latest["slug"]}.html">Read the letter</a>')
     else:
-        listing = '<div class="card empty"><h2>The first letter is on its way</h2><p>Subscribe to get it in your inbox the day it goes out.</p><a class="btn" href="../index.html#subscribe">Subscribe</a></div>'
-        latest_html = '<p class="eyebrow">This week\'s letter</p><h2>The first letter is on its way</h2><p>Every week, one letter to the Mayor on one issue that shapes life in New York: what the problem is, what the data says, and what you can do about it.</p><a class="btn" href="#subscribe">Get it by email</a>'
+        listing = f'<div class="card empty"><h2>The first letter is on its way</h2><p>Subscribe to get it in your inbox the day it goes out.</p><a class="btn" href="{SUBSTACK}/subscribe">Subscribe</a></div>'
+        latest_html = f'<p class="eyebrow">This week\'s letter</p><h2>The first letter is on its way</h2><p>Every week, one letter to the Mayor on one issue that shapes life in New York: what the problem is, what the data says, and what you can do about it.</p><a class="btn" href="{SUBSTACK}/subscribe">Get it by email</a>'
     (ROOT / "letters" / "index.html").write_text(page("Letters", f'<p class="eyebrow">Letters</p><h1>Letters to the Mayor</h1><p class="lede">One letter a week, one issue at a time. Each one ends with what you can do.</p>{listing}', "letters/index.html"))
 
     for f in sorted((ROOT / "content" / "pages").glob("*.html")):
