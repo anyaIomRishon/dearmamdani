@@ -61,14 +61,14 @@ def page(title, body, path, description="", extra_head="", scripts=""):
 <body>
 {banner}
 <header class="site-head"><div class="wrap">
-  <a class="brand" href="{rel}index.html"><b>{SITE}</b><span>{TAGLINE}</span></a>
+  <a class="brand" href="{rel}index.html"><b>Dear <em>Mamdani</em></b><span>{TAGLINE}</span><span class="indep">Independent · Not affiliated with the Mayor or his campaign</span></a>
   <nav class="nav" aria-label="Main">{nav}<a class="btn" href="{rel}index.html#subscribe">Subscribe</a></nav>
 </div></header>
 <main><div class="wrap">
 {body}
 </div></main>
 <footer class="site-foot"><div class="wrap">
-  <span>© {year} {SITE}. Data from public sources, cited on every figure.</span>
+  <span>© {year} {SITE}, an independent citizens\u2019 project. Not affiliated with Mayor Mamdani, his campaign or City Hall. Data from public sources, cited on every figure.</span>
   <span><a href="{rel}about.html#corrections">Corrections</a> · <a href="{SUBSTACK}">We, the Middle on Substack</a></span>
 </div></footer>
 {scripts.replace("{rel}", rel)}
