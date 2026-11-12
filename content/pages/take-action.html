@@ -1,6 +1,7 @@
 <!--
 title: Take action
 description: Petitions, open letters and hearings where New Yorkers can make their voices count.
+reps: yes
 -->
 <p class="eyebrow">Take action</p>
 <h1>Things you can do this month</h1>
@@ -26,3 +27,15 @@ description: Petitions, open letters and hearings where New Yorkers can make the
     <a class="btn ghost" href="https://legistar.council.nyc.gov/Calendar.aspx" rel="noopener">See the hearing calendar</a>
   </article>
 </div>
+
+<section class="do find-reps" id="find-reps">
+  <h2>Find your state senator and Assembly member</h2>
+  <p>Many of the decisions that shape New York City, from tax abatements to rent laws, are made in Albany. Enter your address to find who represents you there.</p>
+  <form>
+    <label class="sr-only" for="reps-address">Your New York City address</label>
+    <input id="reps-address" type="text" autocomplete="street-address" placeholder="Your address, for example 100 Gold St, Manhattan">
+    <button class="btn" type="submit">Find my representatives</button>
+  </form>
+  <div class="reps-out" hidden aria-live="polite"></div>
+  <p class="small" style="margin-top:0.75rem">Your address stays in your browser and is sent only to the city’s address lookup. We don’t store it.</p>
+</section>

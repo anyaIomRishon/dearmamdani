@@ -41,11 +41,23 @@
   </article>
 </div>
 
+<section class="do find-reps" id="find-reps">
+  <h2>Find your state senator and Assembly member</h2>
+  <p>Many of the decisions that shape New York City, from tax abatements to rent laws, are made in Albany. Enter your address to find who represents you there.</p>
+  <form>
+    <label class="sr-only" for="reps-address">Your New York City address</label>
+    <input id="reps-address" type="text" autocomplete="street-address" placeholder="Your address, for example 100 Gold St, Manhattan">
+    <button class="btn" type="submit">Find my representatives</button>
+  </form>
+  <div class="reps-out" hidden aria-live="polite"></div>
+  <p class="small" style="margin-top:0.75rem">Your address stays in your browser and is sent only to the city’s address lookup. We don’t store it.</p>
+</section>
+
 </div></main>
 <footer class="site-foot"><div class="wrap">
   <span>© 2026 Dear Mamdani, an independent citizens’ project. Not affiliated with Mayor Mamdani, his campaign or City Hall. Data from public sources, cited on every figure.</span>
   <span><a href="about.html#corrections">Corrections</a> · <a href="https://wethemiddle.substack.com">We, the Middle on Substack</a></span>
 </div></footer>
-
+<script src="assets/reps.js" defer></script>
 </body>
 </html>

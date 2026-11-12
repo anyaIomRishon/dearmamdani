@@ -116,6 +116,8 @@ def build():
         meta, body = meta_block(f.read_text())
         body = body.replace("{{latest_letter}}", latest_html).replace("{{substack}}", SUBSTACK)
         scripts = '<script src="{rel}assets/scorecard.js" defer></script>' if meta.get("scorecard") == "yes" else ""
+        if meta.get("reps") == "yes":
+            scripts += '<script src="{rel}assets/reps.js" defer></script>'
         name = f.stem + ".html"
         (ROOT / name).write_text(page(meta.get("title", SITE), body, name, meta.get("description", ""), scripts=scripts))
     print("built", len(letters), "letters")
