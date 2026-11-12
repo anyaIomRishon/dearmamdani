@@ -10,6 +10,7 @@ Run:  python3 build.py
     summary: One or two sentences for the letters list and the home page.
     topics: Transportation, Safety
     sign: https://forms.gle/...   (optional: shows a "Sign the letter" box)
+    order: 2   (optional: breaks ties between letters with the same date; higher shows first)
     -->
   Files starting with "_" are skipped (content/letters/_template.html is the starting point for new letters).
 Set PREVIEW = False at launch to remove the preview banner and let search engines index the site.
@@ -97,7 +98,7 @@ def build():
         head = f'<p class="eyebrow">{html.escape(meta.get("topics", "Letter"))} · {date}</p><h1>{html.escape(meta.get("title", slug))}</h1>'
         out = page(meta.get("title", slug), f'<article class="letter">{head}{body}{sign}</article>', f"letters/{slug}.html", meta.get("summary", ""))
         (ROOT / "letters" / f"{slug}.html").write_text(out)
-    letters.sort(key=lambda m: m.get("date", ""), reverse=True)
+    letters.sort(key=lambda m: (m.get("date", ""), int(m.get("order", "0") or 0)), reverse=True)
 
     if letters:
         items = "".join(
