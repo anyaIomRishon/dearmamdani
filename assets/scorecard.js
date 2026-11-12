@@ -29,7 +29,7 @@
   function moves(rows, dir, target, n) {
     if (!target) return;
     target.replaceChildren();
-    rows.filter((r) => r.verdict === dir && r.unit !== 'pct')
+    rows.filter((r) => r.verdict === dir && r.unit !== 'pct' && r.home !== 'no')
       .sort((a, b) => Math.abs(b.change) - Math.abs(a.change)).slice(0, n)
       .forEach((r) => {
         const li = el('li');
