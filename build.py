@@ -10,6 +10,7 @@ Run:  python3 build.py
     summary: One or two sentences for the letters list and the home page.
     topics: Transportation, Safety
     sign: https://forms.gle/...   (optional: shows a "Sign the letter" box)
+    image: assets/photos/x.jpg   (optional header photo; also add alt: and credit:)
     order: 2   (optional: breaks ties between letters with the same date; higher shows first)
     -->
   Files starting with "_" are skipped (content/letters/_template.html is the starting point for new letters).
@@ -97,7 +98,12 @@ def build():
             sign = f'<aside class="do"><h2>Sign the letter</h2><p>Add your name to this letter. We deliver it to the Mayor\'s office with the number of New Yorkers who signed.</p><a class="btn" href="{html.escape(meta["sign"])}">Sign the letter</a></aside>'
         date = datetime.date.fromisoformat(meta.get("date", "2026-01-01")).strftime("%B %-d, %Y")
         head = f'<p class="eyebrow">{html.escape(meta.get("topics", "Letter"))} · {date}</p><h1>{html.escape(meta.get("title", slug))}</h1>'
-        out = page(meta.get("title", slug), f'<article class="letter">{head}{body}{sign}</article>', f"letters/{slug}.html", meta.get("summary", ""))
+        extra = ""
+        if meta.get("image"):
+            cap = f'<figcaption>{html.escape(meta["credit"])}</figcaption>' if meta.get("credit") else ""
+            head += f'<figure class="letter-photo"><img src="../{meta["image"]}" alt="{html.escape(meta.get("alt", ""))}">{cap}</figure>'
+            extra = f'<meta property="og:image" content="https://dearmamdani.nyc/{meta["image"]}">'
+        out = page(meta.get("title", slug), f'<article class="letter">{head}{body}{sign}</article>', f"letters/{slug}.html", meta.get("summary", ""), extra_head=extra)
         (ROOT / "letters" / f"{slug}.html").write_text(out)
     letters.sort(key=lambda m: (m.get("date", ""), int(m.get("order", "0") or 0)), reverse=True)
 

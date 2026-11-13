@@ -240,3 +240,8 @@ main { flex: 1; }
 .card.action ul { margin: 0.5rem 0 1rem; padding-left: 1.1rem; }
 .card.action li { margin-bottom: 0.5rem; }
 .card.action h2 { font-size: 1.25rem; }
+
+/* Letter header photo */
+.letter-photo { margin: 1.25rem 0 1.75rem; }
+.letter-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.letter-photo figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.4rem; }
