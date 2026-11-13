@@ -20,7 +20,8 @@ import html, pathlib, re, datetime
 PREVIEW = True
 SITE = "Dear Mamdani"
 TAGLINE = "Weekly letters and a monthly scorecard from New Yorkers"
-SUBSTACK = "https://wethemiddle.substack.com"
+SUBSTACK = "https://dearmamdani.substack.com"
+PERSONAL = "https://wethemiddle.substack.com"
 ROOT = pathlib.Path(__file__).parent
 NAV = [("agenda.html", "Our agenda"), ("letters/index.html", "Letters"), ("scorecard.html", "Scorecard"),
        ("take-action.html", "Take action"), ("get-in-touch.html", "Get in touch"), ("about.html", "About")]
@@ -75,7 +76,7 @@ def page(title, body, path, description="", extra_head="", scripts=""):
 </div></main>
 <footer class="site-foot"><div class="wrap">
   <span>© {year} {SITE}, an independent citizens\u2019 project. Not affiliated with Mayor Mamdani, his campaign or City Hall. Data from public sources, cited on every figure.</span>
-  <span><a href="{rel}about.html#corrections">Corrections</a> · <a href="{SUBSTACK}">We, the Middle on Substack</a></span>
+  <span><a href="{rel}about.html#corrections">Corrections</a> · <a href="{SUBSTACK}">Dear Mamdani on Substack</a> · Also by Anya: <a href="{PERSONAL}">We, the Middle</a></span>
 </div></footer>
 {scripts.replace("{rel}", rel)}
 </body>
