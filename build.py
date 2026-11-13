@@ -18,7 +18,7 @@ Set PREVIEW = False at launch to remove the preview banner and let search engine
 """
 import html, pathlib, re, datetime
 
-PREVIEW = True
+PREVIEW = False
 SITE = "Dear Mamdani"
 TAGLINE = "Weekly letters and a monthly scorecard from New Yorkers"
 SUBSTACK = "https://dearmamdani.substack.com"
