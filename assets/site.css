@@ -234,3 +234,4 @@ main { flex: 1; }
 .rep { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 1rem; }
 .rep h3 { margin: 0 0 0.75rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.agenda p.agenda-link { margin-top: 0.75rem; font-weight: 600; }
