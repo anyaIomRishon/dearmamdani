@@ -128,6 +128,13 @@ def build():
             scripts += '<script src="{rel}assets/reps.js" defer></script>'
         name = f.stem + ".html"
         (ROOT / name).write_text(page(meta.get("title", SITE), body, name, meta.get("description", ""), scripts=scripts))
+
+    base = "https://dearmamdani.nyc/"
+    urls = [""] + [f.stem + ".html" for f in sorted((ROOT / "content" / "pages").glob("*.html")) if f.stem != "index"]
+    urls += ["letters/index.html"] + [f'letters/{m["slug"]}.html' for m in letters]
+    (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>{base}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n")
     print("built", len(letters), "letters")
 
 if __name__ == "__main__":
