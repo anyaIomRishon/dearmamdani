@@ -235,3 +235,8 @@ main { flex: 1; }
 .rep h3 { margin: 0 0 0.75rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .agenda p.agenda-link { margin-top: 0.75rem; font-weight: 600; }
+
+/* Take action: one card per agenda item */
+.card.action ul { margin: 0.5rem 0 1rem; padding-left: 1.1rem; }
+.card.action li { margin-bottom: 0.5rem; }
+.card.action h2 { font-size: 1.25rem; }
